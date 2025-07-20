@@ -1,5 +1,4 @@
 import NavBar from "../components/NavBar";
-import Footer from "../components/Footer";
 import "../index.css";
 import JAHEZLogo from "../assets/Sponsor/JAHEZ.png";
 import KuwaitLogo from "../assets/Sponsor/kuwait.png";
@@ -245,9 +244,16 @@ const LandingPage = () => {
               </div>
             </div>
           </div>
+          <div className="footer-section">
+            <div className="footer-container">
+              <p className="footer-top">
+                JAHEZ × Kuwait Innovation Center — Hackathon 2025
+              </p>
+              <p className="footer-text">© 2025 FUB. All rights reserved.</p>
+            </div>
+          </div>
         </div>
       </div>
-      <Footer />
     </>
   );
 };

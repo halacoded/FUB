@@ -3,12 +3,22 @@ import "../index.css";
 import JAHEZLogo from "../assets/Sponsor/JAHEZ.png";
 import KuwaitLogo from "../assets/Sponsor/kuwait.png";
 import Creator1 from "../assets/Creators/HalaAlmutairi.png";
+import Creator2 from "../assets/Creators/FarahAlrasheedi.png";
 import { useEffect } from "react";
 import { FaPlayCircle, FaWhatsapp } from "react-icons/fa";
 import { MdDashboard } from "react-icons/md";
 import { AiOutlineBarChart } from "react-icons/ai";
 
 const LandingPage = () => {
+  useEffect(() => {
+    document.body.style.backgroundColor = "#000";
+    document.body.style.color = "#fff"; // ✅ make text white
+
+    return () => {
+      document.body.style.backgroundColor = "#fff"; // reset background
+      document.body.style.color = "#000"; // reset text
+    };
+  }, []);
   useEffect(() => {
     const counters = document.querySelectorAll(".highlight-number");
 
@@ -69,7 +79,7 @@ const LandingPage = () => {
             </p>
 
             <div className="cta-buttons">
-              <a href="#get-started" className="btn btn-secondary">
+              <a href="/signup" className="btn btn-secondary">
                 GET STARTED <span>&#8594;</span>
               </a>
             </div>
@@ -94,7 +104,7 @@ const LandingPage = () => {
               accessible.
             </p>
           </div>
-          <div className="creators-section">
+          <div className="creators-section" id="contact">
             <h3 className="creators-title">Creators</h3>
             <div className="creator-cards">
               <div className="creator-unit">
@@ -120,36 +130,18 @@ const LandingPage = () => {
               <div className="creator-unit">
                 <div
                   className="creator-card"
-                  style={{ backgroundColor: "#B3FFB7" }}
-                  onClick={() => window.open("https://example2.com", "_blank")}
+                  style={{ backgroundColor: "#B3D5FF" }}
+                  onClick={() => window.open("https://example3.com", "_blank")}
                 >
                   <img
-                    src={Creator1}
+                    src={Creator2}
                     alt="Creator 2"
                     className="creator-image"
                   />
                 </div>
                 <div className="creator-info">
-                  <h4 className="creator-name">Name Two</h4>
-                  <p className="creator-role">Role Two</p>
-                </div>
-              </div>
-
-              <div className="creator-unit">
-                <div
-                  className="creator-card"
-                  style={{ backgroundColor: "#B3D5FF" }}
-                  onClick={() => window.open("https://example3.com", "_blank")}
-                >
-                  <img
-                    src={Creator1}
-                    alt="Creator 3"
-                    className="creator-image"
-                  />
-                </div>
-                <div className="creator-info">
-                  <h4 className="creator-name">Name Three</h4>
-                  <p className="creator-role">Role Three</p>
+                  <h4 className="creator-name">Farah Alrasheedi</h4>
+                  <p className="creator-role">Civil Engineer</p>
                 </div>
               </div>
             </div>
@@ -200,7 +192,7 @@ const LandingPage = () => {
               designed for everyone.
             </p>
           </div>
-          <div className="features-section">
+          <div className="features-section" id="features">
             <h2 className="section-title">What We Offer</h2>
             <p className="section-subtitle">
               You bring the Food. We help you go further.
